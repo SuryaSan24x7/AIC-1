@@ -8,7 +8,11 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/total-supply",
+      "dest": "index.js"
+    },
+    {
+      "src": "/api/circulating-supply",
       "dest": "index.js"
     }
   ]
