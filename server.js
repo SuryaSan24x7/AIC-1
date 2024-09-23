@@ -3,7 +3,7 @@ const { ethers } = require("ethers");
 const abi = require("./abi.json"); // Import the ABI file
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Replace with your Infura or another node provider RPC URL
 const rpcUrl = "https://bsc-dataseed1.binance.org/";
