@@ -11,12 +11,12 @@ module.exports = async (req, res) => {
     try {
       const totalSupply = await contract.totalSupply();
       const circulatingSupply = totalSupply.mul(90).div(100); // Calculate circulating supply
-      res.json({ circulatingSupply: circulatingSupply.toString() }); // Return as a JSON object
+      res.send(circulatingSupply.toString()); // Return only the value as plain text
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Failed to fetch circulating supply" });
+      res.status(500).send("Failed to fetch circulating supply"); // Plain text error message
     }
   } else {
-    res.status(405).json({ error: "Method Not Allowed" });
+    res.status(405).send("Method Not Allowed"); // Plain text method not allowed message
   }
 };
