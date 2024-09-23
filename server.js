@@ -51,7 +51,7 @@
 // });
 
 const { ethers } = require("ethers");
-const abi = require("../abi.json"); // Adjust the path to the ABI file
+const abi = require("./abi.json"); // Adjust the path to the ABI file
 
 // Replace with your Infura or another node provider RPC URL
 const rpcUrl = "https://bsc-dataseed1.binance.org/";
